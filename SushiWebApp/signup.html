@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Title</title>
+    <link rel="stylesheet" href="./scss/custom.css" />
+  </head>
+  <body>
+    <div class="vh-100">
+      <div class="container d-flex h-100">
+        <div class="m-auto bg-white shadow rounded p-3">
+          <div class="row">
+            <div class="col-md-6 border-end border-1">
+              <div class="h-100 d-flex align-items-center">
+                <div class="text-center p-3 w-100">
+                  <img
+                    class="img-fluid login-img mb-3"
+                    width="230"
+                    src="assets/images/logo.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 p-lg-5">
+              <h2 class="fw-bold mb-3">Register</h2>
+              <form>
+                <div class="row g-3 mb-3">
+                  <div class="col-md-12">
+                    <label class="form-label fs-sm">Full Name</label>
+                    <input
+                      class="form-control"
+                      name="name"
+                      placeholder="e.g. Juan Dela Cruz"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label fs-sm">Email Address</label>
+                    <input
+                      class="form-control"
+                      name="email"
+                      type="email"
+                      placeholder="e.g. username@domain.com"
+                    />
+                    <span class="form-text fs-xs"
+                      >We'll never share your email with anyone else.</span
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fs-sm">Password</label>
+                    <div class="input-group">
+                      <input
+                        autocomplete="new-password"
+                        class="form-control border-end-0 pe-0"
+                        name="confirmPassword"
+                        placeholder="re-enter your password"
+                        type="password"
+                      />
+                      <button
+                        type="button"
+                        class="btn btn-link shadow-none border border-start-0 text-muted"
+                      >
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fs-sm">Confirm Password</label>
+                    <div class="input-group">
+                      <input
+                        autocomplete="new-password"
+                        class="form-control border-end-0 pe-0"
+                        name="confirmPassword"
+                        placeholder="re-enter your password"
+                        type="password"
+                      />
+                      <button
+                        type="button"
+                        class="btn btn-link shadow-none border border-start-0 text-muted"
+                      >
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="signup_cb_terms"
+                      />
+                      <label
+                        class="form-check-label fs-xs"
+                        for="signup_cb_terms"
+                        >By submitting this form, you agree to our<br />
+                        <a href="/terms" target="_blank"
+                          >Terms and Conditions.</a
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mb-3">
+                  <button class="btn-primary w-50 btn" type="submit">
+                    SIGN UP
+                  </button>
+                </div>
+                <div class="text-center">
+                  <span class="fs-sm"
+                    >Already have an account?
+                    <a class="ms-2" href="signin.html">Sign in</a></span
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

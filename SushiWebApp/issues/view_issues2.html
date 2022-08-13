@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>View-Issues</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+    <style>
+      ul.timeline {
+        list-style-type: none;
+        position: relative;
+      }
+      ul.timeline:before {
+        content: "";
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+      }
+      ul.timeline > li {
+        margin: 20px 0;
+        padding-left: 20px;
+      }
+      ul.timeline > li:before {
+        content: "";
+        background: #0fdd4d;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #c5fad7;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        z-index: 400;
+      }
+
+      @media (min-width: 990px) {
+        #bottom-text {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div
+            class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+            data-bs-backdrop="true"
+            data-bs-scroll="false"
+            id="offcanvas"
+          >
+            <div class="offcanvas-body">
+              <nav class="navbar-dark">
+                <div class="text-center">
+                  <img
+                    class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                    src="../../assets/images/avatar.png"
+                    width="80"
+                    height="80"
+                    alt="profile"
+                  />
+                  <p class="text-dark">Juan DelaCruz</p>
+                </div>
+                <ul class="navbar-nav mt-4">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/homepage.html"
+                      ><i class="bi bi-house text-dark"></i
+                      ><span class="ms-2 text-dark">Home</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/checklist/checklist.html"
+                      ><i class="bi bi-card-checklist text-dark"></i
+                      ><span class="ms-2 text-dark"
+                        >Forms &amp; Checklist</span
+                      ></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/issues/issues.html"
+                      ><i class="bi bi-exclamation-triangle text-dark"></i
+                      ><span class="ms-2 text-dark">Issues</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/learn/learn.html"
+                      ><i class="bi bi-person-video3 text-dark"></i
+                      ><span class="ms-2 text-dark">Learn</span></a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/chat/chat.html"
+                      ><i class="bi bi-chat-dots text-dark"></i
+                      ><span class="ms-2 text-dark">Chat</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="/iManage/announcement/announcement.html"
+                      ><i class="bi bi-megaphone text-dark"></i
+                      ><span class="ms-2 text-dark">Announcement</span></a
+                    >
+                  </li>
+                  <hr class="dropdown-divider bg-dark" />
+                  <li class="nav-item">
+                    <a
+                      class="nav-link font-size-sm accordion-toggle collapsed"
+                      href="#Settings"
+                      data-bs-toggle="collapse"
+                      aria-expanded="true"
+                      ><div class="d-inline-block">
+                        <i class="bi bi-sliders text-dark"></i
+                        ><span class="ms-2 text-dark">Settings</span>
+                      </div>
+                      <div class="float-end p-1">
+                        <i class="bi bi-chevron-down"></i></div
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/documentation.html"
+                      ><i class="bi bi-command text-dark"></i
+                      ><span class="ms-2 text-dark">Documentation</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/profile.html"
+                      ><i class="bi bi-people text-dark"></i
+                      ><span class="ms-2 text-dark">Edit Profile</span></a
+                    >
+                  </li>
+                  <div class="collapse" id="Settings">
+                    <ul class="navbar-nav ms-4">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/account"
+                          ><i class="bi bi-person-check text-dark"></i
+                          ><span class="ms-2 text-dark">Edit Account</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about"
+                      ><i class="bi bi-info-circle text-dark"></i
+                      ><span class="ms-2 text-dark">About</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="my-2">
+              <button class="nav-link text-muted btn btn-link">
+                <i class="bi bi-power"></i
+                ><span class="ms-2 fw-bold small"
+                  ><a class="text-muted" href="/signin">Log out</a></span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main
+          class="d-flex justify-content-center flex-column position-relative"
+        >
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="60"
+                  src="../../assets/images/logo.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+
+          <div class="container mt-4">
+            <div class="d-flex justify-content-between ms-1">
+              <h2 class="pb-0">
+                <strong
+                  ><a href="/issues.html" style="color: black"
+                    ><i class="bi bi-arrow-left me-1"></i></a
+                  >Report Issue View</strong
+                >
+              </h2>
+              <div class="dropdown dropleft">
+                <button
+                  class="btn p-0"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-three-dots-vertical h3"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Assign</a>
+                  <a class="dropdown-item" href="#">Close</a>
+                  <a class="dropdown-item" href="#">Edit</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start">
+              <hr
+                class="border-5 border-top border-success m-0 ms-5 mb-3"
+                style="width: 10%"
+              />
+            </div>
+            <div class="d-flex justify-content-start">
+              <h6 class="pb-0"><strong>Machine Not Working</strong></h6>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="pb-0">Issue Type: Maintenance</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="pb-0">Assign: </span>
+              <span class="ps-2"
+                ><a class="text-white fs-xs p-1 bg-success rounded-3" href="#"
+                  >Operation</a
+                >
+                <a class="text-white fs-xs p-1 bg-success rounded-3" href="#"
+                  >IT</a
+                ></span
+              >
+            </div>
+            <hr class="dropdown-divider bg-dark" />
+
+            <div class="d-flex text-muted pt-0">
+              <div class="pb-3 mb-0 small lh-sm w-100">
+                <div class="d-flex justify-content-between">
+                  <p class="text-red-dark m-1">
+                    <strong class="text-red-dark"
+                      >Reported on: 08 Mar, 08:00</strong
+                    >
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <strong class="text-red-dark m-1">Severity: </strong>
+                  <small
+                    class="badge bg-danger float-end pt-1"
+                    style="height: 20px"
+                    >High</small
+                  >
+                </div>
+                <strong class="m-1">Status:</strong>
+                <a href="#"
+                  ><small
+                    class="bg-primary float-end ps-2 pe-2 pt-1 pb-1 rounded-3 text-white"
+                    >Open</small
+                  ></a
+                >
+              </div>
+            </div>
+
+            <hr class="dropdown-divider bg-dark" />
+          </div>
+
+          <!-- timeline -->
+          <div class="d-flex bg-light position-relative mb-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h4>Progress</h4>
+                  <ul class="timeline" style="z-index: 0">
+                    <li class="ps-2">
+                      <a href="#" class="fs-xs"
+                        >21 March, 10:00pm
+                        <div
+                          class="container pt-1 pb-1 ps-0 pe-0 bg-white border bordertop-0 rounded-3 border-top-0"
+                        >
+                          <p class="text-muted m-2">
+                            <i class="bi bi-chat-left-text-fill fs-xs me-1"></i
+                            >Robin Paddila added a remark
+                          </p>
+                          <p class="text-dark m-2">
+                            <strong>Here is the manual to fix it</strong>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ps-2">
+                      <a href="#" class="fs-xs"
+                        >21 March, 11:00pm
+                        <div
+                          class="container pt-1 pb-1 ps-0 pe-0 bg-white border bordertop-0 rounded-3 border-top-0"
+                        >
+                          <p class="text-muted m-2">
+                            <i class="bi bi-share-fill fs-xs me-1"></i>Robin
+                            Paddila shared this issue to
+                          </p>
+                          <p class="text-dark m-2">
+                            <span class="bg-primary rounded-3 p-1 text-white"
+                              ><strong>Justin</strong></span
+                            >
+                            <span class="bg-primary rounded-3 p-1 text-white"
+                              ><strong>Rammers</strong></span
+                            >
+                            <span class="bg-primary rounded-3 p-1 text-white"
+                              ><strong>Conney</strong></span
+                            >
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ps-2">
+                      <a href="#" class="fs-xs"
+                        >21 March, 11:20pm
+                        <div
+                          class="container pt-1 pb-1 ps-0 pe-0 bg-white border bordertop-0 rounded-3 border-top-0"
+                        >
+                          <p class="text-muted m-2">
+                            <i class="bi bi-chat-left-text-fill fs-xs me-1"></i
+                            >Robin Paddila added a images:
+                          </p>
+                          <p class="text-dark m-2">
+                            <strong>Here is the manual to fix it</strong>
+                          </p>
+                          <img
+                            class="ms-2"
+                            src="/assets/images/6.jpg"
+                            alt="Girl in a jacket"
+                            height="70"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                    <li class="ps-2">
+                      <a href="#" class="fs-xs"
+                        >21 March, 11:25pm
+                        <div
+                          class="container pt-1 pb-1 ps-0 pe-0 bg-white border bordertop-0 rounded-3 border-top-0"
+                        >
+                          <p class="text-muted m-2">
+                            <i class="bi bi-chat-left-text-fill fs-xs me-1"></i
+                            >Robin Paddila added a remark
+                          </p>
+                          <p class="text-dark m-2">
+                            <strong>Here is the manual to fix it</strong>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="d-flex container justify-content-center position-fixed p-0 m-0 pb-2 pt-2 bg-light"
+            id="bottom-text"
+            style="bottom: 0"
+          >
+            <div class="me-2 ms-1">
+              <label
+                ><input type="file" style="display: none" />
+                <a class="text-dark" style="cursor: pointer"
+                  ><i
+                    class="bi bi-paperclip pt-2 ps-2"
+                    style="font-size: 24px"
+                  ></i>
+                </a>
+              </label>
+            </div>
+            <div class="flex-fill">
+              <textarea
+                class="form-control"
+                placeholder="Enter Message"
+                rows="1"
+              ></textarea>
+            </div>
+            <div class="ms-1 me-3">
+              <a href="#"
+                ><i class="bi bi-send text-primary" style="font-size: 25px"></i>
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

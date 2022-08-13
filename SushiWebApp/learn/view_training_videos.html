@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Watch Training Video</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+
+    <style>
+      @media (min-width: 577px) {
+        #vid-content {
+          /* width: 50%; */
+          padding-bottom: 3rem;
+          margin-top: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div class="offcanvas-body">
+            <nav class="navbar-dark">
+              <div class="text-center">
+                <img
+                  class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                  src="../../../../assets/images/avatar.png"
+                  width="80"
+                  height="80"
+                  alt="profile"
+                />
+                <p class="text-dark">Juan DelaCruz</p>
+              </div>
+              <ul class="navbar-nav mt-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/homepage.html"
+                    ><i class="bi bi-house text-dark"></i
+                    ><span class="ms-2 text-dark">Home</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/checklist/checklist.html"
+                    ><i class="bi bi-card-checklist text-dark"></i
+                    ><span class="ms-2 text-dark"
+                      >Forms &amp; Checklist</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/issues/issues.html"
+                    ><i class="bi bi-exclamation-triangle text-dark"></i
+                    ><span class="ms-2 text-dark">Issues</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/learn/learn.html"
+                    ><i class="bi bi-person-video3 text-dark"></i
+                    ><span class="ms-2 text-dark">Learn</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/chat/chat.html"
+                    ><i class="bi bi-chat-dots text-dark"></i
+                    ><span class="ms-2 text-dark">Chat</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/iManage/announcement/announcement.html"
+                    ><i class="bi bi-megaphone text-dark"></i
+                    ><span class="ms-2 text-dark">Announcement</span></a
+                  >
+                </li>
+                <hr class="dropdown-divider bg-dark" />
+                <li class="nav-item">
+                  <a
+                    class="nav-link font-size-sm accordion-toggle collapsed"
+                    href="#Settings"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    ><div class="d-inline-block">
+                      <i class="bi bi-sliders text-dark"></i
+                      ><span class="ms-2 text-dark">Settings</span>
+                    </div>
+                    <div class="float-end p-1">
+                      <i class="bi bi-chevron-down"></i></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/documentation.html"
+                    ><i class="bi bi-command text-dark"></i
+                    ><span class="ms-2 text-dark">Documentation</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/profile.html"
+                    ><i class="bi bi-people text-dark"></i
+                    ><span class="ms-2 text-dark">Edit Profile</span></a
+                  >
+                </li>
+                <div class="collapse" id="Settings">
+                  <ul class="navbar-nav ms-4">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/account"
+                        ><i class="bi bi-person-check text-dark"></i
+                        ><span class="ms-2 text-dark">Edit Account</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"
+                    ><i class="bi bi-info-circle text-dark"></i
+                    ><span class="ms-2 text-dark">About</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main class="vh-100 d-flex flex-column">
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="60"
+                  src="../../../../assets/images/logo.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+
+          <div
+            id="vid-content"
+            class="container-fluid d-flex flex-column justify-content-center"
+          >
+            <div class="row">
+              <div class="col-sm-7">
+                <div
+                  class="d-flex container-fluid justify-content-center mb-2 ps-0 pe-0 me-0 mt-3 mt-lg-0"
+                >
+                  <video width="100%" controls>
+                    <source
+                      src="../../../../assets/vids/mov_bbb.mp4"
+                      type="video/mp4"
+                    />
+                    <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                    Your browser does not support HTML video.
+                  </video>
+                </div>
+
+                <div class="container m-0 p-0 pt-4">
+                  <h5 class="ms-2 me-2">
+                    <strong
+                      >How to Greet Walk-In Customers and Boost Sales</strong
+                    >
+                  </h5>
+                  <hr class="m-1" />
+                  <div class="d-flex justify-content-between">
+                    <div class="leftitem d-flex">
+                      <div class="p-1 align-self-center">
+                        <img
+                          src="../../assets/images/avatar.png"
+                          width="50"
+                          salt=""
+                        />
+                      </div>
+                      <div class="p-1 align-self-center">
+                        <h5 class="m-0 p-0">John Cena</h5>
+                        <span><small>Uploader</small></span>
+                      </div>
+                    </div>
+
+                    <div class="p-1 align-self-center">
+                      <h5 class="m-0 p-0">Upload Date</h5>
+                      <span class="float-end"
+                        ><small>June 10, 2022</small></span
+                      >
+                    </div>
+                  </div>
+                  <p class="p-1 mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Labore sunt vitae omnis sapiente aliquid accusamus nulla
+                    veniam commodi. Similique dicta consectetur aut reiciendis
+                    incidunt rem neque beatae quae modi corporis?
+                  </p>
+
+                  <div class="mt-4 mb-5 ms-3 me-3 d-grid">
+                    <button
+                      class="btn-success btn fs-sm py-2"
+                      type="submit"
+                      style="
+                        cursor: pointer;
+                        border-radius: 1.5rem;
+                        color: white;
+                      "
+                    >
+                      <strong>Confirm and Take Exam</strong>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5 container-fluid">
+                <div
+                  class="container-fluid d-flex align-items-center justify-content-between"
+                >
+                  <h5 class="mb-0">List of Videos</h5>
+                  <h5 class="mb-0">(1 of 5)</h5>
+                </div>
+                <div
+                  class="card card-style mt-2 me-2 mb-2 ms-2 border-0 overflow-auto"
+                  style="height: 560px"
+                >
+                  <div class="content mb-0">
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark vid-item"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 1</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-success"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 1</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 2</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 3</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 4</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 5</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 6</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 7</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                    <a
+                      href="/training_videos.html"
+                      class="d-flex p-3 text-dark"
+                    >
+                      <div class="align-self-center">
+                        <img
+                          src="../../assets/images/Retail Training22.png"
+                          width="120"
+                          class="rounded-3 me-3 border border-2 border-light"
+                          alt="img"
+                        />
+                      </div>
+                      <div class="align-self-center">
+                        <p class="mb-0" style="font-size: 14px">
+                          <strong>Training Video 8</strong>
+                        </p>
+                        <p class="mb-0" style="font-size: 12px; width: 70%">
+                          Basic Steps for Greeting a Walk-In Customers dolor sit
+                          amet.
+                        </p>
+                      </div>
+                      <div
+                        class="position-absolute align-self-center end-0 pe-3"
+                      >
+                        <span class="float-end p-1" style="font-size: 12px"
+                          ><i class="bi bi-check-circle-fill text-muted"></i
+                        ></span>
+                      </div>
+                    </a>
+                    <div class="divider mt-1 border-bottom"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

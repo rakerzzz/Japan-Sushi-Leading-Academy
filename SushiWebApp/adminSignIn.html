@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>日本寿司教育学院</title>
+    <link rel="stylesheet" href="../scss/custom.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="vh-100 bg-dark">
+        <div class="container d-flex h-100">
+          <div class="bg-white shadow rounded m-auto" style="max-width: 400px">
+            <div class="p-4 p-lg-5 py-lg-2">
+              <div class="text-center py-4 pb-2">
+                <div class="d-flex flex-column align-items-center">
+                  <img
+                    class="img-fluid login-img mb-2"
+                    width="100"
+                    src="../assets/images/Sushi/CompanyLogo.png"
+                  />
+                  <h5 class="fw-bold text-dark mb-3">日本寿司教育学院</h5>
+
+                  <h2 class="fw-bold text-dark">Admin Panel</h2>
+                </div>
+              </div>
+              <form class="mb-4">
+                <div class="row g-3 mb-4">
+                  <div class="col-md-12">
+                    <label class="form-label fs-sm">Username</label
+                    ><input
+                      class="form-control"
+                      name="text"
+                      placeholder="Enter Username"
+                      value=""
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label fs-sm">Password</label>
+                    <div class="input-group">
+                      <input
+                        autocomplete="new-password"
+                        class="form-control border-end-0 pe-0"
+                        name="password"
+                        required=""
+                        placeholder="Enter Password"
+                        type="password"
+                        value=""
+                        aria-autocomplete="list"
+                      /><button
+                        type="button"
+                        class="btn btn-link text-muted shadow-none bi bi-eye-slash"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <a
+                    href="../SushiWebApp/adminDashboard.html"
+                    class="btn-primary w-50 btn"
+                  >
+                    LOGIN
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

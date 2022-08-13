@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>View Announcement</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div class="offcanvas-body">
+            <nav class="navbar-dark">
+              <div class="text-center">
+                <img
+                  class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                  src="../../assets/images/avatar.png"
+                  width="80"
+                  height="80"
+                  alt="profile"
+                />
+                <p class="text-dark">Juan DelaCruz</p>
+              </div>
+              <ul class="navbar-nav mt-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/homepage.html"
+                    ><i class="bi bi-house text-dark"></i
+                    ><span class="ms-2 text-dark">Home</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/checklist/checklist.html"
+                    ><i class="bi bi-card-checklist text-dark"></i
+                    ><span class="ms-2 text-dark"
+                      >Forms &amp; Checklist</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/issues/issues.html"
+                    ><i class="bi bi-exclamation-triangle text-dark"></i
+                    ><span class="ms-2 text-dark">Issues</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/learn/learn.html"
+                    ><i class="bi bi-person-video3 text-dark"></i
+                    ><span class="ms-2 text-dark">Learn</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/chat/chat.html"
+                    ><i class="bi bi-chat-dots text-dark"></i
+                    ><span class="ms-2 text-dark">Chat</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/iManage/announcement/announcement.html"
+                    ><i class="bi bi-megaphone text-dark"></i
+                    ><span class="ms-2 text-dark">Announcement</span></a
+                  >
+                </li>
+                <hr class="dropdown-divider bg-dark" />
+                <li class="nav-item">
+                  <a
+                    class="nav-link font-size-sm accordion-toggle collapsed"
+                    href="#Settings"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    ><div class="d-inline-block">
+                      <i class="bi bi-sliders text-dark"></i
+                      ><span class="ms-2 text-dark">Settings</span>
+                    </div>
+                    <div class="float-end p-1">
+                      <i class="bi bi-chevron-down"></i></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/documentation.html"
+                    ><i class="bi bi-command text-dark"></i
+                    ><span class="ms-2 text-dark">Documentation</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/profile.html"
+                    ><i class="bi bi-people text-dark"></i
+                    ><span class="ms-2 text-dark">Edit Profile</span></a
+                  >
+                </li>
+                <div class="collapse" id="Settings">
+                  <ul class="navbar-nav ms-4">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/account"
+                        ><i class="bi bi-person-check text-dark"></i
+                        ><span class="ms-2 text-dark">Edit Account</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"
+                    ><i class="bi bi-info-circle text-dark"></i
+                    ><span class="ms-2 text-dark">About</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main class="vh-100 d-flex flex-column">
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="60"
+                  src="../../assets/images/logo.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+          <!-- End of top Navbar -->
+          <div class="vh-100">
+            <div class="container d-flex h-100">
+              <div class="m-auto bg-white shadow rounded p-3">
+                <div class="row">
+                  <div class="col-md-8 border-end border-1">
+                    <h2>Figaro News Update: New Store</h2>
+                    <p>Mon Feb 27, 2022 8:47am GMT</p>
+                    <hr />
+                    <div class="wrapper position-relative">
+                      <img
+                        class="float-start p-2 pt-1 ps-0"
+                        src="/assets/images/figaronews.png"
+                        alt=""
+                        srcset=""
+                        width="360"
+                      />
+                      <p>By Figaro Admin</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempora incidunt illum eum pariatur culpa excepturi
+                        odit, mollitia nostrum qui autem obcaecati deserunt?
+                        Ducimus error aliquam harum aut? Numquam voluptate
+                        asperiores exercitationem porro laudantium? In harum
+                        quis ipsam repudiandae? Aliquid quasi totam illum
+                        dignissimos aut quas fuga at saepe? Laboriosam, maxime!
+                      </p>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempora incidunt illum eum pariatur culpa excepturi
+                        odit, mollitia nostrum qui autem obcaecati deserunt?
+                        Ducimus error aliquam harum aut? Numquam voluptate
+                        asperiores exercitationem porro laudantium? In harum
+                        quis ipsam repudiandae? Aliquid quasi totam illum
+                        dignissimos aut quas fuga at saepe? Laboriosam, maxime!
+                      </p>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempora incidunt illum eum pariatur culpa excepturi
+                        odit, mollitia nostrum qui autem obcaecati deserunt?
+                        Ducimus error aliquam harum aut? Numquam voluptate
+                        asperiores exercitationem porro laudantium? In harum
+                        quis ipsam repudiandae? Aliquid quasi totam illum
+                        dignissimos aut quas fuga at saepe? Laboriosam, maxime!
+                      </p>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempora incidunt illum eum pariatur culpa excepturi
+                        odit, mollitia nostrum qui autem obcaecati deserunt?
+                        Ducimus error aliquam harum aut? Numquam voluptate
+                        asperiores exercitationem porro laudantium? In harum
+                        quis ipsam repudiandae? Aliquid quasi totam illum
+                        dignissimos aut quas fuga at saepe? Laboriosam, maxime!
+                      </p>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempora incidunt illum eum pariatur culpa excepturi
+                        odit, mollitia nostrum qui autem obcaecati deserunt?
+                        Ducimus error aliquam harum aut? Numquam voluptate
+                        asperiores exercitationem porro laudantium? In harum
+                        quis ipsam repudiandae? Aliquid quasi totam illum
+                        dignissimos aut quas fuga at saepe? Laboriosam, maxime!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="bg-success text-primary ps-2 pe-2">
+                      More Announcement
+                    </h6>
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/figaronews.png"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>The Figaro Group News1</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/angelspizza.jpg"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>Angel Pizza News1</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/tienma.jpg"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>Tienma News1</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/figaronews.png"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>The Figaro Group News2</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/angelspizza.jpg"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>Angel Pizza News2</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/tienma.jpg"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>Tienma News2</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/figaronews.png"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>The Figaro Group News3</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/angelspizza.jpg"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>Angel Pizza News3</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+
+                    <div class="link p-2">
+                      <a href="" class="text-primary position-relative">
+                        <img
+                          class="float-end p-1 pe-0 pt-0"
+                          src="/assets/images/tienma.jpg"
+                          alt=""
+                          srcset=""
+                          width="85"
+                        />
+                        <h6 class="mb-1">
+                          <strong>Tienma News3</strong>
+                        </h6>
+
+                        <p class="text-dark lh-1 mb-0">
+                          <small>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. At, cupiditate. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque, omnis.
+                          </small>
+                        </p>
+                      </a>
+                      <hr class="mb-0" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

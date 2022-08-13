@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Learn Trainings</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+      .bottom-right {
+        position: absolute;
+        bottom: 5px;
+        right: 8px;
+        font-size: 12px;
+      }
+
+      body{
+        background-color: white;
+      }
+
+      .container .row .col .card{
+        -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+      }
+
+      .container .row .col .card:hover{
+        opacity: .7;
+      }
+
+      @media (max-width: 576px) {
+        .card {
+          white-space: 0;
+          font-size: 12px;
+          max-height: 230px;
+        }
+
+        .card a .card-body h5{
+          font-size: 15px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .card a .card-body .card-text{
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        
+
+      }
+
+      @media (min-width: 1320px){
+
+        .container .search-width{
+          width: 50%;
+        }
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div class="offcanvas-body">
+            <nav class="navbar-dark">
+              <div class="text-center">
+                <img
+                  class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                  src="../../assets/images/avatar.png"
+                  width="80"
+                  height="80"
+                  alt="profile"
+                />
+                <p class="text-dark">Juan DelaCruz</p>
+              </div>
+              <ul class="navbar-nav mt-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/homepage.html"
+                    ><i class="bi bi-house text-dark"></i
+                    ><span class="ms-2 text-dark">Home</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/checklist/checklist.html"
+                    ><i class="bi bi-card-checklist text-dark"></i
+                    ><span class="ms-2 text-dark"
+                      >Forms &amp; Checklist</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/issues/issues.html"
+                    ><i class="bi bi-exclamation-triangle text-dark"></i
+                    ><span class="ms-2 text-dark">Issues</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/learn/learn.html"
+                    ><i class="bi bi-person-video3 text-dark"></i
+                    ><span class="ms-2 text-dark">Learn</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/chat/chat.html"
+                    ><i class="bi bi-chat-dots text-dark"></i
+                    ><span class="ms-2 text-dark">Chat</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/iManage/announcement/announcement.html"
+                    ><i class="bi bi-megaphone text-dark"></i
+                    ><span class="ms-2 text-dark">Announcement</span></a
+                  >
+                </li>
+                <hr class="dropdown-divider bg-dark" />
+                <li class="nav-item">
+                  <a
+                    class="nav-link font-size-sm accordion-toggle collapsed"
+                    href="#Settings"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    ><div class="d-inline-block">
+                      <i class="bi bi-sliders text-dark"></i
+                      ><span class="ms-2 text-dark">Settings</span>
+                    </div>
+                    <div class="float-end p-1">
+                      <i class="bi bi-chevron-down"></i></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/documentation.html"
+                    ><i class="bi bi-command text-dark"></i
+                    ><span class="ms-2 text-dark">Documentation</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/profile.html"
+                    ><i class="bi bi-people text-dark"></i
+                    ><span class="ms-2 text-dark">Edit Profile</span></a
+                  >
+                </li>
+                <div class="collapse" id="Settings">
+                  <ul class="navbar-nav ms-4">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/account"
+                        ><i class="bi bi-person-check text-dark"></i
+                        ><span class="ms-2 text-dark">Edit Account</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"
+                    ><i class="bi bi-info-circle text-dark"></i
+                    ><span class="ms-2 text-dark">About</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main class="vh-100 d-flex flex-column">
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="120"
+                  src="../../assets/images/logo2.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+          <nav class="shadow-sm ">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button
+                class="nav-link active"
+                id="nav-home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-home"
+                type="button"
+                role="tab"
+                aria-controls="nav-home"
+                aria-selected="true"
+              >
+                <i class="bi bi-caret-right-square"></i> My Course
+              </button>
+              <button
+                class="nav-link"
+                id="nav-profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-profile"
+                type="button"
+                role="tab"
+                aria-controls="nav-profile"
+                aria-selected="false"
+              >
+              <i class="bi bi-hourglass-split"></i></i> Training
+              </button>
+
+              <button
+                class="nav-link"
+                id="nav-profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-profile"
+                type="button"
+                role="tab"
+                aria-controls="nav-profile"
+                aria-selected="false"
+              >
+                <i class="bi bi-bookmark-check"></i> Completed
+              </button>
+            </div>
+          </nav>
+
+          <div class="container p-0 m-0 d-flex justify-content-center ">
+            <div class="search-width input-group p-2 mb-2 mt-1">
+              <input
+                    class="form-control py-1.5 border-right-0 border rounded-pill rounded-end"
+                    type="search"
+                    placeholder="Filter .."
+                    id="example-search-input"
+                  /><span class="input-group-append"
+                    ><button
+                      class="btn btn-success border-left-0 border py-2 px-3 rounded-pill rounded-start"
+                      type="button"
+                    >
+                      <i class="bi bi-search text-white"></i></button
+                  ></span>
+            </div>
+          </div>
+
+          <div class="container pb-3">
+            <div class="row row-cols-2 row-cols-md-3 g-2">
+              <div class="col">
+                <div class="card h-100">
+                  <a class="text-dark" href="/iManage/learn/view_training_videos.html">
+                    <div class="container-fluid position-relative p-0 m-0">
+                      <img
+                        src="../../assets/images/Retail Training.png"
+                        class="card-img-top "
+                        alt="..."
+                      />
+                      <div class="bottom-right text-white">
+                        <div class="mb-1 bg-dark rounded-pill ps-2 pe-2">1 of 4 completed</div>
+                        <div class="bg-dark rounded-pill ps-2 pe-2">1 of 4 completed</div>
+                      </div>
+
+                    </div>
+
+                    <div class="card-body">
+                      <h5 class="card-title">Retail Training</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <a class="text-dark" href="/view_training_videos.html">
+                    <div class="container-fluid position-relative p-0 m-0">
+                      <img
+                        src="../../assets/images/Customer Service.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="bottom-right bg-dark text-white">
+                        4 of 5 completed
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Customer Service Role</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <a class="text-dark" href="/view_training_videos.html">
+                    <div class="container-fluid position-relative p-0 m-0">
+                      <img
+                        src="../../assets/images/food safety.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="bottom-right bg-dark text-white">
+                        3 of 4 completed
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Food Safety Essentials</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <a class="text-dark" href="/view_training_videos.html">
+                    <div class="container-fluid position-relative p-0 m-0">
+                      <img
+                        src="../../assets/images/clinic training.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="bottom-right bg-dark text-white">
+                        13 of 20 completed
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Basic Training for Clinic Staff
+                      </h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <a class="text-dark" href="/view_training_videos.html">
+                    <div class="container-fluid position-relative p-0 m-0">
+                      <img
+                        src="../../assets/images/resto partner.png"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="bottom-right bg-dark text-white">
+                        9 of 12 completed
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Restaurant Partnetship</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <a class="text-dark" href="/view_training_videos.html">
+                    <div class="container-fluid position-relative p-0 m-0">
+                      <img
+                        src="../../assets/images/training2.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="bottom-right bg-dark text-white">
+                        2 of 6 completed
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Dumbell Training</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

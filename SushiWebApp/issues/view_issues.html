@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>View-Issues</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+    <style>
+      @media (min-width: 990px) {
+        #bottom-text {
+          width: 80%;
+        }
+      }
+
+      .page-content::-webkit-scrollbar {
+        display: none;
+      }
+
+      textarea {
+        resize: none;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div
+            class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+            data-bs-backdrop="true"
+            data-bs-scroll="false"
+            id="offcanvas"
+          >
+            <div class="offcanvas-body">
+              <nav class="navbar-dark">
+                <div class="text-center">
+                  <img
+                    class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                    src="../../assets/images/avatar.png"
+                    width="80"
+                    height="80"
+                    alt="profile"
+                  />
+                  <p class="text-dark">Juan DelaCruz</p>
+                </div>
+                <ul class="navbar-nav mt-4">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/homepage.html"
+                      ><i class="bi bi-house text-dark"></i
+                      ><span class="ms-2 text-dark">Home</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/checklist/checklist.html"
+                      ><i class="bi bi-card-checklist text-dark"></i
+                      ><span class="ms-2 text-dark"
+                        >Forms &amp; Checklist</span
+                      ></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/issues/issues.html"
+                      ><i class="bi bi-exclamation-triangle text-dark"></i
+                      ><span class="ms-2 text-dark">Issues</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/learn/learn.html"
+                      ><i class="bi bi-person-video3 text-dark"></i
+                      ><span class="ms-2 text-dark">Learn</span></a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/chat/chat.html"
+                      ><i class="bi bi-chat-dots text-dark"></i
+                      ><span class="ms-2 text-dark">Chat</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="/iManage/announcement/announcement.html"
+                      ><i class="bi bi-megaphone text-dark"></i
+                      ><span class="ms-2 text-dark">Announcement</span></a
+                    >
+                  </li>
+                  <hr class="dropdown-divider bg-dark" />
+                  <li class="nav-item">
+                    <a
+                      class="nav-link font-size-sm accordion-toggle collapsed"
+                      href="#Settings"
+                      data-bs-toggle="collapse"
+                      aria-expanded="true"
+                      ><div class="d-inline-block">
+                        <i class="bi bi-sliders text-dark"></i
+                        ><span class="ms-2 text-dark">Settings</span>
+                      </div>
+                      <div class="float-end p-1">
+                        <i class="bi bi-chevron-down"></i></div
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/documentation.html"
+                      ><i class="bi bi-command text-dark"></i
+                      ><span class="ms-2 text-dark">Documentation</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/iManage/profile.html"
+                      ><i class="bi bi-people text-dark"></i
+                      ><span class="ms-2 text-dark">Edit Profile</span></a
+                    >
+                  </li>
+                  <div class="collapse" id="Settings">
+                    <ul class="navbar-nav ms-4">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/account"
+                          ><i class="bi bi-person-check text-dark"></i
+                          ><span class="ms-2 text-dark">Edit Account</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about"
+                      ><i class="bi bi-info-circle text-dark"></i
+                      ><span class="ms-2 text-dark">About</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="my-2">
+              <button class="nav-link text-muted btn btn-link">
+                <i class="bi bi-power"></i
+                ><span class="ms-2 fw-bold small"
+                  ><a class="text-muted" href="/signin">Log out</a></span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main
+          class="d-flex justify-content-center flex-column position-relative"
+        >
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="60"
+                  src="../../assets/images/logo2.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+
+          <div class="container mt-4">
+            <div class="d-flex justify-content-between ms-1">
+              <h2 class="pb-0">
+                <strong
+                  ><a href="/issues.html" style="color: black"
+                    ><i class="bi bi-arrow-left me-1"></i></a
+                  >Report Issue View</strong
+                >
+              </h2>
+              <div class="dropdown dropleft">
+                <button
+                  class="btn p-0"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-three-dots-vertical h3"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Assign</a>
+                  <a class="dropdown-item" href="#">Close</a>
+                  <a class="dropdown-item" href="#">Edit</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start">
+              <hr
+                class="border-5 border-top border-success m-0 ms-5 mb-3"
+                style="width: 10%"
+              />
+            </div>
+            <div class="d-flex justify-content-start">
+              <h6 class="pb-0"><strong>Machine Not Working</strong></h6>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="pb-0">Issue Type: Maintenance</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="pb-0">Assign: </span>
+              <span class="ps-2"
+                ><a class="text-white fs-xs p-1 bg-success rounded-3" href="#"
+                  >Operation</a
+                >
+                <a class="text-white fs-xs p-1 bg-success rounded-3" href="#"
+                  >IT</a
+                ></span
+              >
+            </div>
+            <hr class="dropdown-divider bg-dark" />
+
+            <div class="d-flex text-muted pt-0">
+              <div class="pb-3 mb-0 small lh-sm w-100">
+                <div class="d-flex justify-content-between">
+                  <p class="text-red-dark m-1">
+                    <strong class="text-red-dark"
+                      >Reported on: 08 Mar, 08:00</strong
+                    >
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <strong class="text-red-dark m-1">Severity: </strong>
+                  <small
+                    class="badge bg-danger float-end pt-1"
+                    style="height: 20px"
+                    >High</small
+                  >
+                </div>
+                <strong class="m-1">Status:</strong>
+                <a href="#"
+                  ><small
+                    class="bg-primary float-end ps-2 pe-2 pt-1 pb-1 rounded-3 text-white"
+                    >Open</small
+                  ></a
+                >
+              </div>
+            </div>
+
+            <hr class="dropdown-divider bg-dark" />
+          </div>
+
+          <!-- timeline -->
+
+          <div class="container-fluid p-0 border bg-white">
+            <!-- <div class="header header-fixed p-2 bg-light" style="top: 0">
+              <div class="d-flex notch-clear">
+                <div class="align-self-center">
+                  <a
+                    href="/chatapp1.html"
+                    data-back-button=""
+                    class="text-dark h2 me-2"
+                    ><i class="bi bi-arrow-left-short"></i
+                  ></a>
+                </div>
+                <div class="align-self-center">
+                  <a href="#">
+                    <img
+                      src="assets/images/profile3.jpg"
+                      width="40"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="align-self-center ps-2 ms-1">
+                  <a href="#" class="text-dark" data-menu="menu-user">
+                    <span class="d-block mb-0" style="font-size: 14px"
+                      >Jessica Sanchez</span
+                    >
+                    <span
+                      class="d-block font-10 text-primary"
+                      style="font-size: 10px"
+                      >Active: 15 Minutes Ago</span
+                    >
+                  </a>
+                </div>
+                <div class="align-self-center ms-auto">
+                  <a href="#" class="ms-3 text-dark"
+                    ><i class="bi bi-camera-video-fill"></i
+                  ></a>
+                  <a href="#" class="ms-3 text-dark"
+                    ><i class="bi bi-telephone-fill"></i
+                  ></a>
+                  <a href="#" class="ms-3 text-dark"
+                    ><i class="bi bi-star"></i
+                  ></a>
+                  <a href="#" class="ms-3 text-dark"
+                    ><i class="bi bi-three-dots-vertical"></i
+                  ></a>
+                </div>
+              </div>
+            </div> -->
+
+            <div
+              class="page-content header-clear-medium p-3 ms-4 me-4 overflow-auto"
+              style="height: 610px"
+            >
+              <div class="content my-0">
+                <div class="text-center pb-2 pt-2">
+                  <span class="d-block mt-n1 text-dark" style="font-size: 10px"
+                    >You may now, start the discussion.</span
+                  >
+                </div>
+
+                <div class="d-flex">
+                  <div class="align-self-end mb-2">
+                    <img
+                      src="/assets/images/empty.png"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle me-3"
+                    />
+                  </div>
+                  <div class="align-self-center">
+                    <div
+                      class="bg-white shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0 color-theme">
+                        Heya Joe. We need to talk.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile3.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle me-3 mb-2"
+                    />
+                  </div>
+                  <div class="align-self-center">
+                    <div
+                      class="bg-white shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0">
+                        Did you happen to know where my Ford Mustang is? can't
+                        seem to find it anywhere.
+                      </p>
+                    </div>
+                    <span class="ps-2 d-block text-dark" style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="d-flex">
+                  <div class="align-self-center ms-auto">
+                    <div
+                      class="bg-success shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0 text-white">
+                        Hello, John. I think it's better we talk face to face.
+                        Let's meet and sort things out.
+                      </p>
+                    </div>
+                    <span
+                      class="ps-3 d-block text-dark text-end"
+                      style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle ms-3 mb-2"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-4"></div>
+                <div class="d-flex">
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile3.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle me-3 mb-2"
+                    />
+                  </div>
+                  <div class="align-self-center">
+                    <div
+                      class="bg-white shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0">
+                        Should I be worried? Is there something you're not
+                        telling me?
+                      </p>
+                    </div>
+                    <span class="ps-2 d-block text-dark" style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="d-flex">
+                  <div class="align-self-center ms-auto">
+                    <div
+                      class="bg-success shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0 text-white">
+                        Hello, John. I think it's better we talk face to face.
+                        Let's meet and sort things out.
+                      </p>
+                    </div>
+                    <span
+                      class="ps-3 d-block text-dark text-end"
+                      style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle ms-3 mb-2"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="d-flex">
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile3.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle me-3 mb-2"
+                    />
+                  </div>
+                  <div class="align-self-center">
+                    <div
+                      class="bg-white shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0">
+                        Should I be worried? Is there something you're not
+                        telling me?
+                      </p>
+                    </div>
+                    <span class="ps-2 d-block text-dark" style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="d-flex">
+                  <div class="align-self-center ms-auto">
+                    <div
+                      class="bg-success shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0 text-white">
+                        Hello, John. I think it's better we talk face to face.
+                        Let's meet and sort things out.
+                      </p>
+                    </div>
+                    <span
+                      class="ps-3 d-block text-dark text-end"
+                      style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle ms-3 mb-2"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="d-flex">
+                  <div class="align-self-end">
+                    <img
+                      src="/assets/images/profile3.jpg"
+                      width="45"
+                      alt="img"
+                      class="rounded-circle me-3 mb-2"
+                    />
+                  </div>
+                  <div class="align-self-center">
+                    <div
+                      class="bg-white shadow-sm px-3 py-2"
+                      style="border-radius: 20px"
+                    >
+                      <p class="lh-base mb-0">
+                        Should I be worried? Is there something you're not
+                        telling me?
+                      </p>
+                    </div>
+                    <span class="ps-2 d-block text-dark" style="font-size: 9px"
+                      >2 hours ago</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--		footer fixed at bottom-->
+            <div
+              class="d-flex p-2 bg-light"
+              id="footer-bar"
+              style="bottom: 0px; width: 100%"
+            >
+              <div class="me-2 ms-1">
+                <label
+                  ><input type="file" style="display: none" multiple />
+                  <a class="text-dark ms-2" style="cursor: pointer"
+                    ><i
+                      class="bi bi-plus-circle-fill pt-2"
+                      style="font-size: 24px"
+                    ></i>
+                  </a>
+                </label>
+              </div>
+              <div class="flex-fill">
+                <!-- <input
+                  type="text"
+                  class="form-control input"
+                  placeholder="Enter your Message here"
+                /> -->
+                <textarea
+                  rows="1"
+                  class="mt-1"
+                  placeholder="Enter your Message here"
+                ></textarea>
+              </div>
+              <div class="ms-2 ms-1 speach-icon">
+                <a href="#" class="me-2"
+                  ><i
+                    class="bi bi-arrow-up-circle-fill"
+                    style="font-size: 25px"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap-4.4.1.js"></script>
+    <script>
+      const tx = document.getElementsByTagName("textarea");
+      for (let i = 0; i < tx.length; i++) {
+        tx[i].setAttribute(
+          "style",
+          "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;"
+        );
+        tx[i].addEventListener("input", OnInput, false);
+      }
+
+      function OnInput() {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+      }
+    </script>
+  </body>
+</html>

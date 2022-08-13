@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Issues - Additional Info</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div class="offcanvas-body">
+            <nav class="navbar-dark">
+              <div class="text-center">
+                <img
+                  class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                  src="../../assets/images/avatar.png"
+                  width="80"
+                  height="80"
+                  alt="profile"
+                />
+                <p class="text-dark">Juan DelaCruz</p>
+              </div>
+              <ul class="navbar-nav mt-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/homepage.html"
+                    ><i class="bi bi-house text-dark"></i
+                    ><span class="ms-2 text-dark">Home</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/checklist/checklist.html"
+                    ><i class="bi bi-card-checklist text-dark"></i
+                    ><span class="ms-2 text-dark"
+                      >Forms &amp; Checklist</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/issues/issues.html"
+                    ><i class="bi bi-exclamation-triangle text-dark"></i
+                    ><span class="ms-2 text-dark">Issues</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/learn/learn.html"
+                    ><i class="bi bi-person-video3 text-dark"></i
+                    ><span class="ms-2 text-dark">Learn</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/chat/chat.html"
+                    ><i class="bi bi-chat-dots text-dark"></i
+                    ><span class="ms-2 text-dark">Chat</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/iManage/announcement/announcement.html"
+                    ><i class="bi bi-megaphone text-dark"></i
+                    ><span class="ms-2 text-dark">Announcement</span></a
+                  >
+                </li>
+                <hr class="dropdown-divider bg-dark" />
+                <li class="nav-item">
+                  <a
+                    class="nav-link font-size-sm accordion-toggle collapsed"
+                    href="#Settings"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    ><div class="d-inline-block">
+                      <i class="bi bi-sliders text-dark"></i
+                      ><span class="ms-2 text-dark">Settings</span>
+                    </div>
+                    <div class="float-end p-1">
+                      <i class="bi bi-chevron-down"></i></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/documentation.html"
+                    ><i class="bi bi-command text-dark"></i
+                    ><span class="ms-2 text-dark">Documentation</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/profile.html"
+                    ><i class="bi bi-people text-dark"></i
+                    ><span class="ms-2 text-dark">Edit Profile</span></a
+                  >
+                </li>
+                <div class="collapse" id="Settings">
+                  <ul class="navbar-nav ms-4">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/account"
+                        ><i class="bi bi-person-check text-dark"></i
+                        ><span class="ms-2 text-dark">Edit Account</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"
+                    ><i class="bi bi-info-circle text-dark"></i
+                    ><span class="ms-2 text-dark">About</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main class="vh-100 d-flex flex-column">
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="60"
+                  src="../../assets/images/logo2.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+          <nav class="shadow-sm mt-2">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <span class="nav-link">
+                <h6>
+                  <a href="/issues.html"><i class="bi bi-arrow-left"></i></a>
+                  <span class="py-1 px-2">Additional Info</span>
+                </h6>
+              </span>
+            </div>
+          </nav>
+          <div class="container mt-2">
+            <form>
+              <div class="form-floating mb-2">
+                <select
+                  class="form-select"
+                  id="floatingSelect"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>- Select -</option>
+                  <option value="1">Equipment Damage</option>
+                  <option value="2">IT Issue</option>
+                  <option value="3">Machine Failure</option>
+                </select>
+                <label for="floatingSelect">What Model in the machine</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">What has been done so far</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">What is the serial number</label>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button">Next</button>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

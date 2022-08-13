@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Chat Messages</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+  </head>
+  <style>
+    .page-content::-webkit-scrollbar {
+      display: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+  </style>
+
+  <body>
+    <div class="container-fluid p-0 m-0">
+      <div
+        class="header header-fixed p-2 bg-light"
+        style="position: fixed; width: 100%; top: 0"
+      >
+        <div class="d-flex notch-clear">
+          <div class="align-self-center">
+            <a href="#">
+              <img
+                src="assets/images/profile.jpg"
+                width="40"
+                class="rounded-circle"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="align-self-center ps-2 ms-1">
+            <a href="#" class="text-dark" data-menu="menu-user">
+              <span class="d-block h4 mb-0">Chats</span>
+            </a>
+          </div>
+          <div class="align-self-center ms-auto">
+            <a href="#" class="ms-2 text-dark"
+              ><i class="bi bi-pencil-square h5"></i
+            ></a>
+            <a href="#" class="ms-2 text-dark"
+              ><i class="bi bi-three-dots-vertical h5"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div claas="mt-2">&nbsp;</div>
+      <div class="page-content header-clear-medium mt-5">
+        <div class="me-2 ms-2 pt-2 bg-white">
+          <div class="search-box rounded-4 shadow-sm border-0">
+            <i class="bi bi-search"></i>
+            <input
+              type="text"
+              class="border-0"
+              style="width: calc(100% - 30px)"
+              placeholder="Search here.."
+              data-search=""
+            />
+          </div>
+        </div>
+      </div>
+
+        <div
+          class="card card-style mt-2 me-2 mb-2 ms-2 border-0 overflow-auto"
+          style="height: 560px;"
+        >
+          <div class="content mb-0">
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile2.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Son Goku</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile3.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Dragon Knight</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>John Cena</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile3.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Jack n Jill</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile2.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px">
+                  <strong>Johnson &amp; Johnson</strong>
+                </p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Jennifer Lopez</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile3.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Jordan Michael</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile3.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Ben Tulfo</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Imee Marcos</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile2.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Leni Robredo</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile2.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px"><strong>Mang Tomas</strong></p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+            <a href="/chatapp2.html" class="d-flex p-1 text-dark">
+              <div class="align-self-center">
+                <img
+                  src="assets/images/profile3.jpg"
+                  width="45"
+                  class="rounded-circle me-3"
+                  alt="img"
+                />
+              </div>
+              <div class="align-self-center">
+                <p class="mb-0" style="font-size: 14px">Mang Inasal</p>
+                <p class="mb-0" style="font-size: 12px">
+                  I'm out walking the dog.
+                </p>
+              </div>
+              <div class="position-absolute end-0 pe-3">
+                <span class="text-dark color-theme" style="font-size: 9px"
+                  >20 min ago</span
+                >
+                <br />
+                <span
+                  class="float-end p-1 badge rounded-circle bg-success"
+                  style="font-size: 9px"
+                  >12</span
+                >
+              </div>
+            </a>
+            <div class="divider mt-1 border-bottom"></div>
+          </div>
+        </div>
+      </div>
+      <!--		footer fixed at bottom-->
+      <div
+        class="d-flex p-3 bg-light justify-content-around"
+        id="footer-bar"
+        style="position: fixed; bottom: 0px; width: 100%"
+      >
+        <div class="ms-1">
+          <a href="/chatapp2.html" class="ms-2 text-dark"
+            ><i class="bi bi-chat-fill h5 m-0"></i
+          ></a>
+        </div>
+
+        <div class="ms-1 speach-icon">
+          <a href="/chatapp2.html" class="me-2 text-dark"
+            ><i class="bi bi-people-fill h4 m-0"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

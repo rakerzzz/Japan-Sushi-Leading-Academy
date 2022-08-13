@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Webpage Chat</title>
+    <link rel="stylesheet" href="../../scss/custom.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div
+          class="offcanvas offcanvas-start sidebar-nav bg-white visible"
+          data-bs-backdrop="true"
+          data-bs-scroll="false"
+          id="offcanvas"
+        >
+          <div class="offcanvas-body">
+            <nav class="navbar-dark">
+              <div class="text-center">
+                <img
+                  class="img-fluid rounded-circle img-thumbnail p-0 m-2"
+                  src="../../assets/images/avatar.png"
+                  width="80"
+                  height="80"
+                  alt="profile"
+                />
+                <p class="text-dark">Juan DelaCruz</p>
+              </div>
+              <ul class="navbar-nav mt-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/homepage.html"
+                    ><i class="bi bi-house text-dark"></i
+                    ><span class="ms-2 text-dark">Home</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/checklist/checklist.html"
+                    ><i class="bi bi-card-checklist text-dark"></i
+                    ><span class="ms-2 text-dark"
+                      >Forms &amp; Checklist</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/issues/issues.html"
+                    ><i class="bi bi-exclamation-triangle text-dark"></i
+                    ><span class="ms-2 text-dark">Issues</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/learn/learn.html"
+                    ><i class="bi bi-person-video3 text-dark"></i
+                    ><span class="ms-2 text-dark">Learn</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/chat/chat.html"
+                    ><i class="bi bi-chat-dots text-dark"></i
+                    ><span class="ms-2 text-dark">Chat</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/iManage/announcement/announcement.html"
+                    ><i class="bi bi-megaphone text-dark"></i
+                    ><span class="ms-2 text-dark">Announcement</span></a
+                  >
+                </li>
+                <hr class="dropdown-divider bg-dark" />
+                <li class="nav-item">
+                  <a
+                    class="nav-link font-size-sm accordion-toggle collapsed"
+                    href="#Settings"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    ><div class="d-inline-block">
+                      <i class="bi bi-sliders text-dark"></i
+                      ><span class="ms-2 text-dark">Settings</span>
+                    </div>
+                    <div class="float-end p-1">
+                      <i class="bi bi-chevron-down"></i></div
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/documentation.html"
+                    ><i class="bi bi-command text-dark"></i
+                    ><span class="ms-2 text-dark">Documentation</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/iManage/profile.html"
+                    ><i class="bi bi-people text-dark"></i
+                    ><span class="ms-2 text-dark">Edit Profile</span></a
+                  >
+                </li>
+                <div class="collapse" id="Settings">
+                  <ul class="navbar-nav ms-4">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/account"
+                        ><i class="bi bi-person-check text-dark"></i
+                        ><span class="ms-2 text-dark">Edit Account</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"
+                    ><i class="bi bi-info-circle text-dark"></i
+                    ><span class="ms-2 text-dark">About</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="my-2">
+            <button class="nav-link text-muted btn btn-link">
+              <i class="bi bi-power"></i
+              ><span class="ms-2 fw-bold small"
+                ><a class="text-muted" href="/signin">Log out</a></span
+              >
+            </button>
+          </div>
+        </div>
+        <main class="vh-100 d-flex flex-column">
+          <nav
+            class="shadow-sm navbar fixed-top navbar-expand-lg navbar-light bg-white position-relative"
+          >
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="btn btn-sm btn-link fs-4 ps-2 text-dark"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <a href="# " class="navbar-brand me-auto"
+                ><img
+                  class="img-fluid mb-1"
+                  width="60"
+                  src="../../assets/images/logo.png"
+                  alt="logo"
+              /></a>
+              <a href="# " class="navbar-brand me-auto"></a>
+              <a><i class="bi bi-bell m-1" style="font-size: 1em"></i>1 </a>
+            </div>
+          </nav>
+
+          <div class="container-fluid vh-100 ms-0 me-0 ps-0 pe-0">
+            <div class="container">
+              <div
+                class="container d-flex justify-content-between p-3 ps-0 pb-0"
+              >
+                <div class="align-self-center"><h2 class="mb-0">Chat</h2></div>
+                <form class="form-inline my-2 my-lg-0">
+                  <button
+                    class="btn btn-success my-2 my-sm-0 text-white"
+                    type="submit"
+                  >
+                    + New Message
+                  </button>
+                </form>
+              </div>
+              <hr class="text-white p-0 m-0" />
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="input-group p-2 mb-2 ps-0">
+                    <input
+                      class="form-control py-1.5 border-right-0 border"
+                      type="search"
+                      placeholder="Search User.."
+                      id="example-search-input"
+                    /><span class="input-group-append"
+                      ><button
+                        class="btn btn-success border-left-0 border py-2 px-3"
+                        type="button"
+                      >
+                        <i class="bi bi-search text-white"></i></button
+                    ></span>
+                  </div>
+                  <div class="mb-2"></div>
+                  <div
+                    class="card card-style mb-0 border-0 bg-light overflow-auto"
+                    style="height: 70vh"
+                  >
+                    <div class="content mb-0">
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile2.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>John Wick</strong></p>
+                          <p class="mb-0">Sell me this pen.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >1 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >10</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>John Wall</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile2.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>Mark Porter</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>Harry Roque</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>Jingoy Estrada</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile2.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>BinibiningMarikit</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>John Wall</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>John Wall</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+
+                      <a
+                        class="d-flex p-2 pt-3 pb-3 mb-2 text-dark bg-white"
+                        href="#"
+                        style="border-radius: 13px"
+                      >
+                        <div class="align-self-center">
+                          <img
+                            class="rounded-circle"
+                            src="../../assets/images/profile.jpg"
+                            width="40"
+                            height="40"
+                            alt=""
+                          />
+                        </div>
+                        <div class="align-self-center ms-2">
+                          <p class="mb-0"><strong>John Wall</strong></p>
+                          <p class="mb-0">Shoot the ball bruu.</p>
+                        </div>
+                        <div class="position-absolute end-0 pe-3">
+                          <span class="font-9 opacity-40 color-theme"
+                            >2 min</span
+                          >
+                          <br />
+                          <span
+                            class="float-end mt-n1 pt-1 badge rounded-pill bg-success scale-switch"
+                            >13</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 mt-5" style="height: 70vh">
+                  <div class="header header-fixed">
+                    <div class="d-flex notch-clear">
+                      <div class="align-self-center">
+                        <a href="#">
+                          <img
+                            src="../../assets/images/profile2.jpg"
+                            width="40"
+                            class="rounded-circle"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="align-self-center ps-2 ms-1">
+                        <a href="#" class="text-dark" data-menu="menu-user">
+                          <span class="d-block" style="font-size: 14px"
+                            ><strong>John Wick</strong></span
+                          >
+                          <span
+                            class="d-block font-10 text-primary"
+                            style="font-size: 10px"
+                            >Active: 15 Minutes Ago</span
+                          >
+                        </a>
+                      </div>
+                      <div class="align-self-center ms-auto">
+                        <a href="#" class="ms-2 text-dark"
+                          ><i class="bi bi-person-plus-fill"></i
+                        ></a>
+                        <a href="#" class="ms-2 text-dark"
+                          ><i class="bi bi-star"></i
+                        ></a>
+                        <a href="#" class="ms-2 text-dark"
+                          ><i class="bi bi-info-circle"></i
+                        ></a>
+                        <a href="#" class="ms-2 text-dark"
+                          ><i class="bi bi-three-dots-vertical"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="page-content header-clear-medium overflow-auto"
+                    style="height: 80%"
+                  >
+                    <div class="content my-0 overflow-auto">
+                      <div class="text-center pb-2">
+                        <span
+                          class="d-block mt-n1 opacity-50"
+                          style="font-size: 10px"
+                          >No More Messages. Started 2 Hours ago.</span
+                        >
+                      </div>
+                      <div class="d-flex">
+                        <div class="align-self-end mb-2">
+                          <img
+                            src="../../assets/images/empty.png"
+                            width="45"
+                            alt="img"
+                            class="rounded-xl me-3"
+                          />
+                        </div>
+                        <div class="align-self-center">
+                          <div
+                            class="bg-white shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0 color-theme">
+                              Heya Joe. We need to talk.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile2.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle me-3 mb-2"
+                          />
+                        </div>
+                        <div class="align-self-center">
+                          <div
+                            class="bg-white shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0">
+                              Did you happen to know where my Ford Mustang is?
+                              can't seem to find it anywhere.
+                            </p>
+                          </div>
+                          <span
+                            class="ps-2 d-block opacity-50"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mb-4"></div>
+                      <div class="d-flex">
+                        <div class="align-self-center ms-auto">
+                          <div
+                            class="bg-success shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0 text-white">
+                              Hello, John. I think it's better we talk face to
+                              face. Let's meet and sort things out.
+                            </p>
+                          </div>
+                          <span
+                            class="ps-3 d-block opacity-50 text-end"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle ms-3 mb-2"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-4"></div>
+                      <div class="d-flex">
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile2.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle me-3 mb-2"
+                          />
+                        </div>
+                        <div class="align-self-center">
+                          <div
+                            class="bg-white shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0">
+                              Should I be worried? Is there something you're not
+                              telling me?
+                            </p>
+                          </div>
+                          <span
+                            class="ps-2 d-block opacity-50"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mb-4"></div>
+                      <div class="d-flex">
+                        <div class="align-self-center ms-auto">
+                          <div
+                            class="bg-success shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0 text-white">
+                              Hello, John. I think it's better we talk face to
+                              face. Let's meet and sort things out.
+                            </p>
+                          </div>
+                          <span
+                            class="ps-3 d-block opacity-50 text-end"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle ms-3 mb-2"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-4"></div>
+                      <div class="d-flex">
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile2.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle me-3 mb-2"
+                          />
+                        </div>
+                        <div class="align-self-center">
+                          <div
+                            class="bg-white shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0">
+                              Should I be worried? Is there something you're not
+                              telling me?
+                            </p>
+                          </div>
+                          <span
+                            class="ps-2 d-block opacity-50"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mb-4"></div>
+                      <div class="d-flex">
+                        <div class="align-self-center ms-auto">
+                          <div
+                            class="bg-success shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0 text-white">
+                              Hello, John. I think it's better we talk face to
+                              face. Let's meet and sort things out.
+                            </p>
+                          </div>
+                          <span
+                            class="ps-3 d-block opacity-50 text-end"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle ms-3 mb-2"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-4"></div>
+                      <div class="d-flex">
+                        <div class="align-self-end">
+                          <img
+                            src="../../assets/images/profile2.jpg"
+                            width="45"
+                            alt="img"
+                            class="rounded-circle me-3 mb-2"
+                          />
+                        </div>
+                        <div class="align-self-center">
+                          <div
+                            class="bg-white shadow-sm px-3 py-2"
+                            style="border-radius: 20px"
+                          >
+                            <p class="lh-base mb-0">
+                              Should I be worried? Is there something you're not
+                              telling me?
+                            </p>
+                          </div>
+                          <span
+                            class="ps-2 d-block opacity-50"
+                            style="font-size: 9px"
+                            >2 hours ago</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex container p-0 pb-1 mt-4" id="footer-bar">
+                    <div class="me-2 ms-1">
+                      <label
+                        ><input type="file" style="display: none" />
+                        <a class="text-dark" style="cursor: pointer"
+                          ><i
+                            class="bi bi-plus-circle-fill pt-2"
+                            style="font-size: 24px"
+                          ></i>
+                        </a>
+                      </label>
+                    </div>
+                    <div class="flex-fill">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter your Message here"
+                      />
+                    </div>
+                    <div class="ms-2 ms-1 speach-icon">
+                      <a href="#" class="me-2"
+                        ><i
+                          class="bi bi-arrow-up-circle-fill"
+                          style="font-size: 25px"
+                        ></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Title</title>
+    <link rel="stylesheet" href="./scss/custom.css" />
+  </head>
+  <body>
+    <div class="vh-100">
+      <div class="container d-flex h-100">
+        <div class="m-auto bg-white shadow rounded p-3">
+          <div class="row">
+            <div class="col-md-6 border-end border-1">
+              <div class="h-100 d-flex align-items-center">
+                <div class="text-center p-3 w-100">
+                  <img
+                    class="img-fluid login-img mb-3"
+                    width="230"
+                    src="assets/images/logo.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 p-lg-5">
+              <h3 class="fw-bold">Forgot Password?</h3>
+              <p class="text-muted mb-3">
+                Enter your email and we'll send you a link to reset your
+                password.
+              </p>
+              <form class="mb-4">
+                <label class="form-label fs-sm">Email Address</label>
+                <input
+                  class="form-control mb-3"
+                  name="email"
+                  type="email"
+                  autocomplete="nope"
+                  placeholder="Email Address"
+                />
+                <div class="text-center">
+                  <button class="w-50 btn btn-primary">SEND</button>
+                </div>
+              </form>
+              <div class="text-center">
+                <a class="btn btn-link link-dark" href="signin.html">
+                  <i class="bi bi-arrow-left me-2"></i>Back to sign in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

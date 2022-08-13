@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./scss/custom.css"/>
+</head>
+<body>
+<div class="vh-100">
+    <div class="container d-flex h-100">
+        <div class="m-auto bg-white shadow rounded p-3">
+            <div class="row">
+                <div class="col-md-6 border-end border-1">
+                    <div class="h-100 d-flex align-items-center">
+                        <div class="text-center p-3 w-100">
+                            <img class="img-fluid login-img mb-3" width="230" src="assets/images/logo.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-4 p-lg-5">
+                    <h2 class="fw-bold">Reset your password</h2>
+                    <p class="text-muted mb-3">Please choose a new password containing a minimum of 8
+                        characters.</p>
+                    <form>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-12">
+                                <label class="form-label fs-sm">New Password</label>
+                                <div class="input-group">
+                                    <input autocomplete="new-password"
+                                           class="form-control border-end-0 pe-0"
+                                           name="confirmPassword"
+                                           placeholder="re-enter your password" type="password"/>
+                                    <button type="button"
+                                            class="btn btn-link shadow-none border border-start-0 text-muted">
+                                        <i class="bi bi-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label fs-sm">Confirm Password</label>
+                                <div class="input-group">
+                                    <input autocomplete="new-password"
+                                           class="form-control border-end-0 pe-0"
+                                           name="confirmPassword"
+                                           placeholder="re-enter your password" type="password"/>
+                                    <button type="button"
+                                            class="btn btn-link shadow-none border border-start-0 text-muted">
+                                        <i class="bi bi-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn-primary w-50 btn" type="submit" style="cursor: pointer;">RESET
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
