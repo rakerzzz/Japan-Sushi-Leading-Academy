@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1.0"
     />
     <title>日本寿司教育学院</title>
-    <link rel="stylesheet" href="../scss/custom.css" />
+    <link rel="stylesheet" href="../../../../scss/custom.css" />
   </head>
   <body>
     <div id="root">
@@ -18,9 +18,12 @@
               class="d-flex justify-content-between align-items-center w-100 px-lg-5"
             >
               <div>
-                <a href="../SushiWebApp/welcome.html" class="fw-bold text-dark d-flex align-items-center">
+                <a
+                  href="welcome.html"
+                  class="fw-bold text-dark d-flex align-items-center"
+                >
                   <img
-                    src="../assets/images/sushi/CompanyLogo.png"
+                    src="../../../../assets/images/sushi/CompanyLogo.png"
                     alt=""
                     height="50"
                     class="pe-1"
@@ -30,7 +33,7 @@
               </div>
               <div>
                 <a
-                  href="../SushiWebApp/signin.html"
+                  href="signin.html"
                   class="btn btn-primary pt-1 pb-1 px-4 fs-md fw-bold"
                   style="letter-spacing: 1px"
                 >
@@ -44,31 +47,35 @@
           <div class="container d-flex align-items-left h-100 p-5">
             <div class="m-auto p-3 mt-2">
               <div class="text-center">
-                <i class="bi bi-envelope-check display-1"></i>
-                <h5 class="fw-bold mb-2">
-                  Check your Email to continue Registration.
-                </h5>
-                <p class="fs-xs mb-3">
-                  You have just been sent an email containing link and
-                  instruction to continue registration.
+                <h2 class="fw-bold mb-4">Please Enter your Email-Address</h2>
+                <input
+                  type="text"
+                  class="form-control w-75 mx-auto mb-3"
+                  placeholder="Enter Email-Address"
+                  value=""
+                  required=""
+                />
+                <p>
+                  *By submitting this button, you agree to receive email from
+                  us.
                 </p>
-                <a
-                    href="../SushiWebApp/regForm.html"
-                    class="pt-1 pb-1 px-4 fs-xs fw-bold w-50 mx-3"
-                    style="letter-spacing: 1px"
-                  >
-                    https://japansushileadingacademy.com/registrationform/samplelinkVPaiSmwlepaflwqAS
-                  </a>
-                <div class="d-flex justify-content-center mt-4">
 
-                  
+                <div class="d-flex justify-content-center">
                   <a
-                    href="../SushiWebApp/welcome.html"
-                    class="btn btn-primary pt-1 pb-1 px-4 fs-md fw-bold w-50 mx-3 "
+                    href="emailSent.html"
+                    class="btn btn-primary pt-1 pb-1 px-4 fs-md fw-bold w-25 mx-3"
                     style="letter-spacing: 1px"
                   >
-                    BACK TO HOMEPAGE
+                    SUBMIT
                   </a>
+                  <a
+                    href="welcome.html"
+                    class="btn btn-outline-dark pt-1 pb-1 px-4 fs-md fw-bold w-25 mx-3"
+                    style="letter-spacing: 1px"
+                  >
+                    GO BACK
+                  </a>
+                </div>
               </div>
             </div>
           </div>
