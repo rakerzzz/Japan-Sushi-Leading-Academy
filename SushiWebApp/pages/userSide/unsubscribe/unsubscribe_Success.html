@@ -45,14 +45,14 @@
                   ><span class="ms-2">Dashboard</span></a
                 >
               </li>
-              <li class="nav-item container-fluid">
-                <a class="nav-link" href="/class/roles"
+              <li class="nav-item container-fluid bg-primary">
+                <a class="nav-link active" href="/class/roles"
                   ><i class="bi bi-journal-text"></i
                   ><span class="ms-2">Change Password</span></a
                 >
               </li>
-              <li class="nav-item container-fluid bg-primary">
-                <a class="nav-link active" href="/class/sessions"
+              <li class="nav-item container-fluid">
+                <a class="nav-link" href="/class/sessions"
                   ><i class="bi bi-journal-text"></i
                   ><span class="ms-2">Change Email</span></a
                 >
@@ -121,65 +121,29 @@
             </div>
           </div>
         </nav>
-        <div class="container px-lg-4 py-lg-3 mt-3">
-          <h2 class="mb-3">Change Email Address</h2>
-          <hr class="mb-3" />
-          <div class="container d-flex align-items-left h-100">
-            <div class="p-3 mt-2" style="max-width: 500px">
-              <form class="needs-validation" novalidate="">
-                <div class="row justify-content-center g-5">
-                  <div class="col-lg-12 col-sm-12 mb-lg-3">
-                    <div class="row g-2 align-items-end">
-                      <div class="col-sm-4">
-                        <label for="firstName" class="form-label"
-                          >New Email:</label
-                        >
-                      </div>
-                      <div class="col-sm-8">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="firstName"
-                          placeholder=""
-                          value=""
-                          required=""
-                        />
-                      </div>
-                      <div class="col-sm-4">
-                        <label for="firstName" class="form-label"
-                          >Confirm Email:</label
-                        >
-                      </div>
-                      <div class="col-sm-8">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="firstName"
-                          placeholder=""
-                          value=""
-                          required=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr class="mb-3" />
-                <div class="d-grid gap-3 d-md-flex justify-content-md-center">
-                  <a
-                    href="changeEmail_Success.html"
-                    class="btn btn-primary pt-1 pb-1 me-md-2"
-                  >
-                    CHANGE EMAIL
-                  </a>
-                  <a
-                    href="../dboard/userDashboard.html"
-                    class="btn btn-outline-dark pt-1 pb-1 me-md-2"
-                  >
-                    GO BACK
-                  </a>
-                </div>
-              </form>
-            </div>
+        <div class="container d-flex align-items-left h-100 p-lg-5 pt-lg-2">
+          <div class="m-auto p-3 mt-2 bg-white" style="width: 500px;">
+            <div class="text-center">
+              <i class="bi bi-check-circle text-success display-1"></i>
+              <h2 class="fw-bold mb-2">
+                Withdrawal procedure completed!
+              </h2>
+              <p class="mb-3 text-center">
+                The withdrawal procedure has been completed.
+We have sent you a confirmation email, so please check it.
+We are looking forward to seeing you again.
+              </p>
+              <div class="d-flex justify-content-center mt-4">
+                <a
+                  href="../dboard/userDashboard.html"
+                  class="btn btn-primary pt-1 pb-1 px-4 fs-md fw-bold w-50 mx-3 "
+                  style="letter-spacing: 1px"
+                >
+                  CLOSE
+                </a>
+              </div>
+          </div>
+            </form>
           </div>
         </div>
       </main>

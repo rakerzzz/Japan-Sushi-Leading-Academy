@@ -51,8 +51,8 @@
                   ><span class="ms-2">Change Password</span></a
                 >
               </li>
-              <li class="nav-item container-fluid bg-primary">
-                <a class="nav-link active" href="/class/sessions"
+              <li class="nav-item container-fluid">
+                <a class="nav-link" href="/class/sessions"
                   ><i class="bi bi-journal-text"></i
                   ><span class="ms-2">Change Email</span></a
                 >
@@ -63,8 +63,8 @@
                   ><span class="ms-2">Change UserInfo</span></a
                 >
               </li>
-              <li class="nav-item container-fluid">
-                <a class="nav-link" href="/class/departments"
+              <li class="nav-item container-fluid bg-primary">
+                <a class="nav-link active" href="/class/departments"
                   ><i class="bi bi-ticket-detailed"></i
                   ><span class="ms-2">Inquiry</span></a
                 >
@@ -122,7 +122,7 @@
           </div>
         </nav>
         <div class="container px-lg-4 py-lg-3 mt-3">
-          <h2 class="mb-3">Change Email Address</h2>
+          <h2 class="mb-3">My Inquiries</h2>
           <hr class="mb-3" />
           <div class="container d-flex align-items-left h-100">
             <div class="p-3 mt-2" style="max-width: 500px">
@@ -132,44 +132,75 @@
                     <div class="row g-2 align-items-end">
                       <div class="col-sm-4">
                         <label for="firstName" class="form-label"
-                          >New Email:</label
+                          >Full Name:</label
                         >
                       </div>
                       <div class="col-sm-8">
                         <input
-                          type="email"
+                          type="text"
                           class="form-control"
                           id="firstName"
                           placeholder=""
-                          value=""
+                          value="Yamada Taro"
                           required=""
+                          disabled
                         />
                       </div>
                       <div class="col-sm-4">
                         <label for="firstName" class="form-label"
-                          >Confirm Email:</label
+                          >Phone Number:</label
                         >
                       </div>
                       <div class="col-sm-8">
                         <input
-                          type="email"
+                          type="text"
                           class="form-control"
                           id="firstName"
                           placeholder=""
-                          value=""
+                          value="090-1234-5678"
                           required=""
+                          disabled
                         />
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="firstName" class="form-label"
+                          >Email Address:</label
+                        >
+                      </div>
+                      <div class="col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="firstName"
+                          placeholder=""
+                          value="sample1email@gmail.com"
+                          required=""
+                          disabled
+                        />
+                      </div>
+
+                      <div class="col-sm-4">
+                        <label for="firstName" class="form-label"
+                          >Inquiry Details:</label
+                        >
+                      </div>
+                      <div class="col-sm-8">
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr class="mb-3" />
-                <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                <div class="d-grid gap-3 d-md-flex justify-content-md-end">
                   <a
-                    href="changeEmail_Success.html"
-                    class="btn btn-primary pt-1 pb-1 me-md-2"
+                    href="inquiry_Success.html"
+                    class="btn btn-primary px-4 py-1 me-md-2"
                   >
-                    CHANGE EMAIL
+                    SEND
                   </a>
                   <a
                     href="../dboard/userDashboard.html"
