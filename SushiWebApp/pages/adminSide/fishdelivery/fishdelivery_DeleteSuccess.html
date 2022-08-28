@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>日本寿司教育学院</title>
+    <link rel="stylesheet" href="../../../../scss/custom.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div
+        class="offcanvas offcanvas-start sidebar-nav bg-dark visible"
+        data-bs-backdrop="true"
+        data-bs-scroll="false"
+        id="offcanvas"
+      >
+        <div class="offcanvas-body px-0">
+          <nav class="navbar-dark">
+            <div class="text-center px-3">
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid p-0 m-2"
+                  src="../../../../assets/images/Sushi/CompanyLogo.png"
+                  width="60"
+                  height="60"
+                  alt="profile"
+                />
+                <div class="d-flex flex-column text-start">
+                  <h6 class="text-white m-0">日本寿司教育学院</h6>
+                  <h6 class="text-white m-0">Admin Panel</h6>
+                </div>
+              </div>
+            </div>
+            <hr class="dropdown-divider bg-light mx-3" />
+            <ul class="navbar-nav">
+              <li class="nav-item container-fluid">
+                <a class="nav-link" href="/class/users" aria-current="page"
+                  ><i class="bi bi-people"></i
+                  ><span class="ms-2">Dashboard</span></a
+                >
+              </li>
+              <li class="nav-item container-fluid">
+                <a class="nav-link" href="/class/roles"
+                  ><i class="bi bi-journal-text"></i
+                  ><span class="ms-2">Sushi Restaurant Setting</span></a
+                >
+              </li>
+              <li class="nav-item container-fluid">
+                <a class="nav-link" href="/class/sessions"
+                  ><i class="bi bi-journal-text"></i
+                  ><span class="ms-2">Creation of Lesson</span></a
+                >
+              </li>
+              <li class="nav-item container-fluid bg-secondary">
+                <a class="nav-link active" href="/class/verifications"
+                  ><i class="bi bi-journal-text"></i
+                  ><span class="ms-2">Fish Delivery Setup</span></a
+                >
+              </li>
+              <li class="nav-item container-fluid">
+                <a class="nav-link" href="/class/departments"
+                  ><i class="bi bi-ticket-detailed"></i
+                  ><span class="ms-2">Participant Management</span></a
+                >
+              </li>
+              <li
+                class="nav-item container-fluid disabledbtn border-bottom border-dark"
+              >
+                <a class="nav-link graytext"
+                  ><i class="bi bi-exclamation-triangle"></i
+                  ><span class="ms-2">Payment Management</span></a
+                >
+              </li>
+              <li
+                class="nav-item container-fluid disabledbtn border-bottom border-dark"
+              >
+                <a class="nav-link graytext"
+                  ><i class="bi bi-chat"></i
+                  ><span class="ms-2">Mail Delivery</span></a
+                >
+              </li>
+              <li
+                class="nav-item container-fluid disabledbtn border-bottom border-dark"
+              >
+                <a class="nav-link graytext"
+                  ><i class="bi bi-messenger"></i
+                  ><span class="ms-2">Others</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <main class="vh-100 d-flex flex-column">
+        <nav class="shadow-sm navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container-fluid">
+            <button
+              type="button"
+              class="btn btn-sm btn-link fs-4 ps-0 text-dark"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+            <!-- for brand besides navbar -->
+            <a href="# " class="navbar-brand me-auto fw-bold"></a>
+            <!-- for brand besides navbar -->
+            <div class="d-none d-sm-block">
+              <div class="d-flex">
+                <a
+                  class="nav-link text-dark h6 m-0"
+                  href="/class/users"
+                  aria-current="page"
+                >
+                  <i class="bi bi-bell-fill"></i>
+                  <span class="ms-1">Notification</span>
+                </a>
+                <a
+                  class="nav-link text-dark h6 m-0 me-4"
+                  href="/class/users"
+                  aria-current="page"
+                >
+                  <i class="bi bi-question-circle"></i>
+                  <span class="ms-1">Help</span>
+                </a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="btn btn-white dropdown text-dark h5 m-0 fs-md"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle"></i>
+                <span class="ms-1">Administrator</span>
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container d-flex align-items-left h-100 p-lg-5 pt-lg-2">
+          <div class="m-auto p-3 mt-2 bg-white" style="width: 500px;">
+            <div class="text-center">
+              <i class="bi bi-check-circle text-success display-1"></i>
+              <h2 class="fw-bold mb-2">
+                Success! Data Deleted.
+              </h2>
+              <p class="mb-3">
+                Fish Delivery Data has been deleted.
+              </p>
+              <div class="d-flex justify-content-center mt-4">
+                <a
+                  href="fishdelivery.html"
+                  class="btn btn-primary pt-1 pb-1 px-4 fs-md fw-bold w-50 mx-3 "
+                  style="letter-spacing: 1px"
+                >
+                  CLOSE
+                </a>
+              </div>
+          </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
