@@ -153,115 +153,150 @@
         <div class="container px-lg-4 py-lg-3 mt-3">
           <h2 class="mb-3">Create New Fish Delivery Info</h2>
           <hr class="mb-3" />
+          <div class="input-group justify-content-center mb-5">
+            <span
+              class="btn btn-primary"
+              style="cursor: default"
+              id="basic-addon2"
+              >Delivery Contents</span
+            >
+            <span
+              class="btn btn-outline-primary"
+              style="cursor: default"
+              id="basic-addon2"
+              >Shipping Address</span
+            >
+            <span
+              class="btn btn-outline-primary"
+              style="cursor: default"
+              id="basic-addon2"
+              >Confirmation</span
+            >
+          </div>
 
-          <div class="container d-flex align-items-left h-100 p-lg-5 pt-lg-0">
-            <div class="m-auto mt-0 p-3 pt-0" style="max-width: 500px">
-              <div class="input-group justify-content-center mb-3">
-                <span
-                  class="btn btn-primary"
-                  style="cursor: default"
-                  id="basic-addon2"
-                  >Delivery Contents</span
-                >
-                <span
-                  class="btn btn-outline-primary"
-                  style="cursor: default"
-                  id="basic-addon2"
-                  >Shipping Address</span
-                >
-                <span
-                  class="btn btn-outline-primary"
-                  style="cursor: default"
-                  id="basic-addon2"
-                  >Confirmation</span
-                >
-              </div>
-              <hr />
-              <form class="needs-validation" novalidate="">
-                <div class="row justify-content-center g-5">
-                  <div class="col-lg-12 col-sm-12">
-                    <div class="row g-2 align-items-end">
-                      <div class="col-sm-4">
-                        <label for="firstName" class="form-label"
-                          >Shipping Date:</label
-                        >
-                      </div>
-                      <div class="col-sm-8">
-                        <input
-                          class="form-control me-2"
-                          type="date"
-                          id="shippingDate"
-                          name="shippingDate"
-                        />
-                      </div>
-                      <div class="col-sm-4">
-                        <label
-                          for="firstName"
-                          class="form-label d-flex justify-content-center flex-column lh-1"
-                          >Estimated Date<span>of Arrival: </span></label
-                        >
-                      </div>
-                      <div class="col-sm-8">
-                        <input
-                          class="form-control me-2"
-                          type="date"
-                          id="arrivalDate"
-                          name="arrivalDate"
-                        />
-                      </div>
-                      <div class="col-sm-4">
-                        <label for="firstName" class="form-label"
-                          >Fish Species:</label
-                        >
-                      </div>
-                      <div class="col-sm-8">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="firstName"
-                          placeholder=""
-                          value=""
-                          required=""
-                        />
-                      </div>
-                      <div class="col-sm-4">
-                        <label
-                          for="firstName"
-                          class="form-label d-flex justify-content-center flex-column lh-1"
-                          >Number<span>of Shipments:</span></label
-                        >
-                      </div>
-                      <div class="col-sm-8">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="firstName"
-                          placeholder=""
-                          value=""
-                          required=""
-                        />
-                      </div>
-                    </div>
+          <form class="needs-validation" novalidate="">
+            <div class="row g-5">
+              <div class="col-lg-6 col-sm-12 border-end py-3">
+                <div class="row g-2 align-items-end">
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label"
+                      >Shipping Date:</label
+                    >
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="date" class="form-control" id="date1" />
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label lh-1"
+                      >Estimated Date<br />of Arrival:</label
+                    >
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="date" class="form-control" id="date2" />
+                  </div>
+                  <div class="col-sm-4 align-self-start">
+                    <label for="firstName" class="form-label"
+                      >Fish Species:</label
+                    >
+                  </div>
+                  <div class="col-sm-8">
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label"
+                      >Consignor Code:</label
+                    >
+                  </div>
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
                   </div>
                 </div>
-                <hr />
-                <div class="d-grid gap-3 d-md-flex justify-content-md-end">
-                  <a
-                    href="fishdelivery.html"
-                    class="btn btn-outline-dark pt-1 pb-1 me-md-2 px-3"
-                  >
-                    Cancel
-                  </a>
-                  <a
-                    href="fishdelivery_AddFishDeliveryInfo2.html"
-                    class="btn btn-primary pt-1 pb-1 me-md-2 px-4"
-                  >
-                    NEXT
-                  </a>
+              </div>
+
+              <div class="col-lg-6 col-sm-12 py-3">
+                <div class="row g-2 align-items-end">
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label"
+                      >Delivery Size:</label
+                    >
+                  </div>
+                  <div class="col-sm-8">
+                    <select class="form-select" id="country" required="">
+                      <option value="">Courier Service 120 size</option>
+                      <option>Courier Service 60 size</option>
+                      <option>Courier Service 80 size</option>
+                      <option>Courier Service 100 size</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label lh-1"
+                      >Storage<br />Temperature:</label
+                    >
+                  </div>
+                  <div class="col-sm-8">
+                    <select class="form-select" id="country" required="">
+                      <option value="">Refrigeration</option>
+                      <option>Room temp</option>
+                      <option>Open Air</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Item Code:</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Item Name:</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      placeholder=""
+                      value=""
+                      required=""
+                    />
+                  </div>
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
+            <hr />
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a
+                href="fishdelivery.html"
+                class="btn btn-outline-dark pt-1 pb-1 me-md-2 px-3"
+              >
+                GO BACK
+              </a>
+              <a
+                href="fishdelivery_AddFishDeliveryInfo2.html"
+                type="button"
+                class="btn btn-primary pt-1 pb-1 me-md-2 px-lg-4"
+              >
+                NEXT
+              </a>
+            </div>
+          </form>
         </div>
       </main>
     </div>
